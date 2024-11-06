@@ -1,0 +1,167 @@
+/* Reset de estilos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #1e3c72, #1e2a78, #ff4b5c); /* Gradiente azul, morado y rojo */
+    background-size: 400% 400%; /* Aumentar el tamaño del gradiente para un efecto más fluido */
+    animation: gradientAnimation 10s ease infinite; /* Animación de fondo */
+    color: #f0f0f0; /* Texto claro para buen contraste */
+    padding: 20px;
+    margin-top: 13%;
+}
+
+/* Animación del gradiente */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Gradiente de texto (para el título y metas) */
+h1, .goal-text {
+    background: linear-gradient(45deg, #1e3c72, #1e2a78, #ff4b5c); /* Gradiente de color */
+    -webkit-background-clip: text; /* Hacer que el gradiente solo se aplique al texto */
+    background-clip: text; /* Compatibilidad con otros navegadores */
+    color: transparent; /* Hacer el color del texto transparente para que se vea el gradiente */
+    font-weight: bold;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1f1f1f; /* Fondo oscuro para el contenedor */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Cabecera */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: transparent; /* El color será el gradiente */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Estilos del contenedor de metas */
+.goals-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #333;
+    color: #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    background: #6a1b9a; /* Morado oscuro */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(106, 27, 154, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #9b4dca; /* Morado más claro al pasar el ratón */
+}
+
+/* Lista de metas */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    background: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s ease;
+}
+
+/* Meta completada */
+li.completed {
+    background: #4e84c0; /* Azul completado */
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* Estilos de los botones de acción */
+button.remove {
+    background: transparent;
+    color: #f44336; /* Rojo para eliminar */
+    font-size: 1.2rem; /* Tamaño más pequeño */
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+button.remove:hover {
+    color: #e57373; /* Rojo más claro al pasar el ratón */
+}
+
+button.complete {
+    background: #4e84c0; /* Azul para completar */
+}
+
+li .goal-text {
+    flex-grow: 1; /* Esto empuja los botones hacia la derecha */
+    margin-right: 10px; /* Espacio entre el texto de la meta y los botones */
+    color: transparent; /* Color transparente para mostrar el gradiente */
+    background: white; /* Gradiente para el texto */
+    -webkit-background-clip: text; /* Asegura que el gradiente se aplique solo al texto */
+    background-clip: text; /* Compatibilidad con otros navegadores */
+}
+
+/* Ajustar el tamaño de los botones */
+button.complete, button.remove {
+    margin-left: 10px; /* Espacio entre los botones */
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #bbb;
+    font-size: 0.9rem;
+}

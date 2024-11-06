@@ -1,0 +1,86 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Cuerpo del sitio */
+body {
+    background: linear-gradient(135deg, #282c34, #1d1f24);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Encabezado */
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #4fc3f7;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Sección de carga de archivos */
+.upload-section {
+    margin-top: 30px;
+}
+
+.upload-btn {
+    display: inline-block;
+    background: #4fc3f7;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.upload-btn:hover {
+    background: #03a9f4;
+}
+
+.file-input {
+    display: none;
+}
+
+/* Barra de progreso */
+.progress-bar-container {
+    width: 100%;
+    height: 5px;
+    background: #444;
+    margin-top: 20px;
+    display: none;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: #76ff03;
+    border-radius: 10px;
+}
+
+.file-info {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #bbb;
+}
